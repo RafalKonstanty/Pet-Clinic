@@ -32,8 +32,18 @@
 						<mainClass>pl.konstanty.SfgPetClinicApplication</mainClass>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<configuration>
+						<goals>install</goals>
+					</configuration>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
+	<scm>
+		<developerConnection>scm:git:https://github.com/RafalKonstanty/pet-clinic</developerConnection>
+	</scm>
 
 </project>
