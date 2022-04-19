@@ -1,4 +1,4 @@
-package pl.konstanty.sfgpetclinic.model;
+package pl.konstanty.model;
 
 public class Person {
     private String firstName;
