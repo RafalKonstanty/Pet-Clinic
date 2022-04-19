@@ -45,5 +45,11 @@
 		<developerConnection>scm:git:https://github.com/RafalKonstanty/pet-clinic</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
+<!--	There was some confusion with the output of maven.
+The output does not mean it is skipping building the modules or deploying the modules.
+It is a message about the refactoring of the versions.
+The output is telling us that the parent pom owns the version and the child versions are dependent on the parent pom.
+This means that it does not need to refactor the child modules pom.xml
+so it prints the child in the reactor summary as SKIPPED.-->
 
 </project>
