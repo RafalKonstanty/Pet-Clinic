@@ -4,10 +4,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import pl.konstanty.model.Owner;
 import pl.konstanty.model.Vet;
-import services.OwnerService;
-import services.VetService;
-import services.map.OwnerServiceMap;
-import services.map.VetServiceMap;
+import pl.konstanty.services.OwnerService;
+import pl.konstanty.services.VetService;
 
 //CommandLineRunner allows us to run on SpringBoot startup
 //When this gets into Spring Context thanks to @Component it will execute on start
@@ -17,9 +15,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

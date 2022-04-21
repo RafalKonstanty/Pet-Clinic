@@ -1,9 +1,8 @@
-package services.map;
+package pl.konstanty.services.map;
 
 import org.springframework.stereotype.Service;
 import pl.konstanty.model.Owner;
-import services.CrudService;
-import services.OwnerService;
+import pl.konstanty.services.OwnerService;
 
 import java.util.Set;
 

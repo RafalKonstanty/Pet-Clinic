@@ -1,4 +1,4 @@
-package services;
+package pl.konstanty.services;
 
 import java.util.Set;
 

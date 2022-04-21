@@ -1,14 +1,13 @@
-package services.map;
+package pl.konstanty.services.map;
 
 import org.springframework.stereotype.Service;
 import pl.konstanty.model.Vet;
-import services.CrudService;
-import services.VetService;
+import pl.konstanty.services.VetService;
 
 import java.util.Set;
 
 @Service
-public class VetServiceMap<T, ID> extends AbstractMapService<Vet, Long> implements VetService{
+public class VetServiceMap<T, ID> extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {

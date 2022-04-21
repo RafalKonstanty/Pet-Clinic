@@ -1,4 +1,4 @@
-package services;
+package pl.konstanty.services;
 
 import pl.konstanty.model.Pet;
 

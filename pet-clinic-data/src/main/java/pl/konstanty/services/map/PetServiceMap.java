@@ -1,9 +1,8 @@
-package services.map;
+package pl.konstanty.services.map;
 
 import org.springframework.stereotype.Service;
 import pl.konstanty.model.Pet;
-import services.CrudService;
-import services.PetService;
+import pl.konstanty.services.PetService;
 
 import java.util.Set;
 
