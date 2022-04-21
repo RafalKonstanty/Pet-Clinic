@@ -3,9 +3,25 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Vet List Page</title>
+    <title>Vets Page</title>
 </head>
 <body>
-    <h1 th:text="'Vet Page List'"></h1>
+    <h1 th:text="'Vets Page List'"></h1>
+    <table>
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vet : ${vets}">
+            <td th:text="${vet.id}"></td>
+            <td th:text="${vet.firstName}"></td>
+            <td th:text="${vet.lastName}"></td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
