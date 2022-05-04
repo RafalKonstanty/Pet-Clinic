@@ -4,6 +4,7 @@ import pl.konstanty.model.BaseEntity;
 
 import java.util.*;
 
+//we use Inheritance(extend) only when we want to get those behaviours without @Overriding them
 public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> {
 
     protected Map<Long, T> map = new HashMap<>();
