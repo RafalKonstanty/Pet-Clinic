@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaft.org">
+<html lang="en" xmlns:th="http://www.thymeleaft.org" th:replace="~{fragments/layout :: layout (~{::body}, 'home')}">
 <head>
     <meta charset="UTF-8">
     <title>Pet Clinic Index</title>
@@ -7,7 +7,7 @@
 <body>
 
 <!-- Not putting text into single quotes returns error -->
-    <h1 th:text="'Index test'">Index Page</h1>
+    <h1 th:text="#{welcome}">Index Page</h1>
 
 </body>
 </html>
