@@ -3,8 +3,10 @@ package pl.konstanty.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import pl.konstanty.model.Owner;
+import pl.konstanty.model.PetType;
 import pl.konstanty.model.Vet;
 import pl.konstanty.services.OwnerService;
+import pl.konstanty.services.PetTypeService;
 import pl.konstanty.services.VetService;
 
 //CommandLineRunner allows us to run on SpringBoot startup
@@ -14,14 +16,25 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType savedDogType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setName("Cat");
+        PetType savedCat = petTypeService.save(cat);
+
         Owner owner1 = new Owner();
 //        owner1.setId(1L);
         owner1.setFirstName("Michael");
